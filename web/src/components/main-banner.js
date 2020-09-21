@@ -1,5 +1,5 @@
 import React from "react";
-import Sketch from "react-p5";
+// import Sketch from "react-p5";
 import styles from "./main-banner.css";
 
 function MainBanner({ headline }) {
