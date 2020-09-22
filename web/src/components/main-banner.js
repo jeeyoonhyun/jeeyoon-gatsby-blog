@@ -5,19 +5,6 @@ import styles from "./main-banner.css";
 
 const MainBanner = ({ headline }) => {
   const [bgSketch] = useP5(sketch);
-
-  // https://github.com/gatsbyjs/gatsby/issues/5835
-  componentDidMount() {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('resize', this.setChartDimensions)
-    }
-  }
-  componentWillUnmount() {
-    if (typeof window !== 'undefined') {
-      window.removeEventListener('resize', this.setChartDimensions)
-    }
-  }
-
   // Canvas will be rendered as child of div
   return (
     <div className="wrapper" id="wrap" ref={bgSketch}>
