@@ -48,6 +48,7 @@ exports.createPages = async ({ graphql, actions }) => {
   await createBlogPostPages(graphql, actions);
 };
 
+// custom setting
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === "build-html") {
     actions.setWebpackConfig({
