@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Canvas } from "p5-react-renderer";
 import "p5";
+import { useP5 } from "@gen/react-use-p5";
 import { sketch } from "./main-banner-sketch.js";
 import styles from "./main-banner.css";
 let width;
 let height;
 const MainBanner = ({ headline }) => {
+  const [bgSketch] = useP5(sketch);
+
   useEffect(() => {
     // update canvas size when resized
     const updateSize = () => {
