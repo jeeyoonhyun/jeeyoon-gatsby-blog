@@ -4,7 +4,7 @@ import styles from "./main-banner.css";
 
 function MainBanner({ headline }) {
   return (
-    <div className="sketch-container">
+    <div className="wrapper">
       <div className="bg">
         <h1>{headline}</h1>
         {/* <canvas></canvas>
