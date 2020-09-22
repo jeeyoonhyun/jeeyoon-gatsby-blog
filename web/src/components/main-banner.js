@@ -7,24 +7,16 @@ const MainBanner = ({ headline }) => {
   const [bgSketch] = useP5(sketch);
 
   // https://github.com/gatsbyjs/gatsby/issues/5835
-  const [hasRan, setHasRan] = useState(false);
-  const [screenSize, setScreenSize] = useState({
-    height: 0,
-    width: 0,
-  });
-  const updateScreenSize = () => {
-    setScreenSize({ width: window.innerWidth, height: window.innerHeight });
-  };
-  useEffect(() => {
-    if (!hasRan) {
-      setHasRan(true);
-      updateScreenSize();
+  componentDidMount() {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', this.setChartDimensions)
     }
-    window.addEventListener("resize", updateScreenSize);
-    return () => {
-      window.removeEventListener("resize", updateScreenSize);
-    };
-  }, [screenSize]);
+  }
+  componentWillUnmount() {
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('resize', this.setChartDimensions)
+    }
+  }
 
   // Canvas will be rendered as child of div
   return (
