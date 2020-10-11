@@ -55,8 +55,12 @@ export default {
       type: 'mainImage',
       options: { hotspot: true }
     },
+    // custom objects
     {
       type: 'youtube'
+    },
+    {
+      type: 'codepen'
     }
   ]
 }
