@@ -4,7 +4,7 @@ import React from 'react'
 // sketch url: 'https://editor.p5js.org/jeeyoonhyun/sketches/5nXV80qXS'
 
 const p5EditorPreview = ({ value }) => {
-  const { url } = value //you need the curly braces!! (destructuring)
+  const { url = '' } = value //you need the curly braces!! (destructuring)
   const splitURL = url.split('/')
   // ["https:", "", "editor.p5js.org", "jeeyoonhyun", "sketches", "5nXV80qXS"]
   const [, , , user, , hash] = splitURL

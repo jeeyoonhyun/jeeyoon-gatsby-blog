@@ -2,7 +2,7 @@ import React from 'react'
 import Codepen from 'react-codepen-embed'
 
 const CodePenPreview = ({ value }) => {
-  const { url, themeId = 'dark' } = value // <= add themeId here, default it to "dark"
+  const { url = '', themeId = 'dark' } = value // <= add themeId here, default it to "dark"
   const splitURL = url.split('/')
   // [ 'https:', '', 'codepen.io', 'sdras', 'pen', 'gWWQgb' ]
   const [, , , user, , hash] = splitURL

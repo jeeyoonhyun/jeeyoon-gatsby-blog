@@ -1,7 +1,7 @@
 import React from "react";
 
 const CodePen = ({ node }) => {
-  const { url, themeId = "dark" } = node; // <= add themeId here, default it to "dark"
+  const { url = "", themeId = "dark" } = node; // <= add themeId here, default it to "dark"
   const splitURL = url.split("/");
   // [ 'https:', '', 'codepen.io', 'sdras', 'pen', 'gWWQgb' ]
   const [, , , user, , hash] = splitURL;

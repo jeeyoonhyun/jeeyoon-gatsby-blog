@@ -1,7 +1,7 @@
 import React from "react";
 
 const p5Editor = ({ node }) => {
-  const { url } = node; //you need the curly braces!! (destructuring)
+  const { url = "" } = node; //you need the curly braces!! (destructuring)
   const splitURL = url.split("/");
   // ["https:", "", "editor.p5js.org", "jeeyoonhyun", "sketches", "5nXV80qXS"]
   const [, , , user, , hash] = splitURL;
