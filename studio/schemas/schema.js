@@ -20,6 +20,7 @@ import authorReference from './objects/authorReference'
 //custom objects
 import youtube from './objects/youtube'
 import codepen from './objects/codepen'
+import p5editor from './objects/p5editor'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -40,7 +41,8 @@ export default createSchema({
     bioPortableText,
     excerptPortableText,
     youtube,
-    codepen
+    codepen,
+    p5editor
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
   ])

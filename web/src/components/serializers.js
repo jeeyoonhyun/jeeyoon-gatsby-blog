@@ -2,6 +2,7 @@ import React from "react";
 import Figure from "./Figure";
 import YouTube from "./youtube";
 import CodePen from "./codepen";
+import p5Editor from "./p5editor";
 
 const serializers = {
   types: {
@@ -9,6 +10,7 @@ const serializers = {
     mainImage: Figure,
     youtube: YouTube,
     codepen: CodePen,
+    p5editor: p5Editor,
   },
 };
 

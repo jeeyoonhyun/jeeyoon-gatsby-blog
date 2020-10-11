@@ -1,18 +1,22 @@
 import React from "react";
 
+{
+  /* <iframe src="https://editor.p5js.org/jeeyoonhyun/embed/znOMTCAl2"></iframe> */
+}
+
 const p5Editor = ({ node }) => {
-  const { url, themeId = "dark" } = node; // <= add themeId here, default it to "dark"
+  const { url } = node; //you need the curly braces!! (destructuring)
   const splitURL = url.split("/");
-  // [ 'https:', '', 'codepen.io', 'sdras', 'pen', 'gWWQgb' ]
+  // ["https:", "", "editor.p5js.org", "jeeyoonhyun", "sketches", "5nXV80qXS"]
   const [, , , user, , hash] = splitURL;
-  const embedUrl = `https://codepen.io/${user}/embed/${hash}?height=370&theme-id=${themeId}&default-tab=result`; // <= add themeId here
+  const embedUrl = `https://editor.p5js.org/${user}/embed/${hash}`;
   return (
     <iframe
+      src={embedUrl}
       height="370"
       style={{ width: "100%" }}
       scrolling="no"
-      title="CodePen Embed"
-      src={embedUrl}
+      title="p5.js Editor Embed"
       frameBorder="no"
       allowTransparency
       allowFullScreen

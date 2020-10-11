@@ -61,6 +61,9 @@ export default {
     },
     {
       type: 'codepen'
+    },
+    {
+      type: 'p5editor'
     }
   ]
 }
