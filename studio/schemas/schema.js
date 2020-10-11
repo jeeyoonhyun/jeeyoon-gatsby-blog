@@ -17,7 +17,7 @@ import excerptPortableText from './objects/excerptPortableText'
 import mainImage from './objects/mainImage'
 import authorReference from './objects/authorReference'
 
-//custom objects
+// custom objects
 import youtube from './objects/youtube'
 import codepen from './objects/codepen'
 import p5editor from './objects/p5editor'

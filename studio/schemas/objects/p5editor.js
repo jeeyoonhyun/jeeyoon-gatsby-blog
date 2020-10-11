@@ -9,7 +9,7 @@ const p5EditorPreview = ({ value }) => {
   // ["https:", "", "editor.p5js.org", "jeeyoonhyun", "sketches", "5nXV80qXS"]
   const [, , , user, , hash] = splitURL
   const embedUrl = `https://editor.p5js.org/${user}/embed/${hash}`
-  return (
+  const iframe = (
     <iframe
       src={embedUrl}
       height="370"
@@ -21,6 +21,8 @@ const p5EditorPreview = ({ value }) => {
       allowFullScreen
     />
   )
+  // https://github.com/gatsbyjs/gatsby/issues/9214#issuecomment-431073612
+  return { typeof: window !== 'undefined' && iframe }
 }
 
 export default {
