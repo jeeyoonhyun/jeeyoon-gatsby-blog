@@ -1,18 +1,13 @@
-import React from 'react'
-import Figure from './Figure'
-import getYouTubeId from 'get-youtube-id'
-import YouTube from 'react-youtube'
+import React from "react";
+import Figure from "./Figure";
+import YouTube from "./youtube";
 
 const serializers = {
   types: {
-    authorReference: ({node}) => <span>{node.author.name}</span>,
+    authorReference: ({ node }) => <span>{node.author.name}</span>,
     mainImage: Figure,
-    youtube: ({ node }) => {
-      const { url } = node;
-      const id = getYouTubeId(url);
+    youtube: YouTube,
+  },
+};
 
-      return <YouTube videoId={id} />;
-  }
-}
-
-export default serializers
+export default serializers;
