@@ -49,13 +49,18 @@ exports.createPages = async ({ graphql, actions }) => {
 };
 
 // custom setting
+// https://www.gatsbyjs.com/docs/debugging-html-builds/
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === "build-html") {
     actions.setWebpackConfig({
       module: {
         rules: [
           {
-            test: /p5/,
+            test: "/node-modules/p5/",
+            use: loaders.null(),
+          },
+          {
+            test: "/bad-module/",
             use: loaders.null(),
           },
         ],
