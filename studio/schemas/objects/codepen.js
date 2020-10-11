@@ -36,7 +36,8 @@ export default {
     {
       name: 'url',
       type: 'url',
-      title: 'CodePen URL'
+      title: 'CodePen URL',
+      validation: Rule => Rule.error('You have to fill out the URL.').required()
     },
     // Add the new field below
     {

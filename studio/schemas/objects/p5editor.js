@@ -40,7 +40,8 @@ export default {
     {
       name: 'url',
       type: 'url',
-      title: 'p5.js Editor URL'
+      title: 'p5.js Editor URL',
+      validation: Rule => Rule.error('You have to fill out the URL.').required()
     }
   ]
 }
